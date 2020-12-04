@@ -1,7 +1,9 @@
 # This is the template code for the CNA337 Final Project
 # Zachary Rubin, zrubin@rtc.edu
 # CNA 337 Fall 2020
-
+# Automate SSH
+# Participants: Dorin Vozian, Vlado Situm, Abdirizak Kulmie
+# Tutoring Liviu Patrasco liviu_patrasco@hotmail.com
 from Server import Server
 
 

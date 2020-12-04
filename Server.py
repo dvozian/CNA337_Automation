@@ -1,3 +1,7 @@
+# CNA 337 Fall 2020
+# Automate SSH
+# Participants: Dorin Vozian, Vlado Situm, Abdirizak Kulmie
+# Tutoring Liviu Patrasco liviu_patrasco@hotmail.com
 import os
 import paramiko
 
