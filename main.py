@@ -17,16 +17,22 @@ if __name__ == '__main__':
     # TODO - Call Ping method and print the results
 
     my_server_ip = "18.188.243.5"
-    my_server = Server(my_server_ip)
-    my_server.ping()
+    my_rsa_key_file = "/Users/user/.ssh/dorin-key"
+    username = "ubuntu"
+
+    my_upgrade_command = 'sudo apt update && sudo apt upgrade -y'
+    my_server = Server(my_server_ip, my_rsa_key_file, username, my_upgrade_command)
+
+    print('Pinging server %s...' % my_server_ip)
     ping_result = my_server.ping()
-
-    print("**********")
-
+    print(ping_result)
     if ping_result == 0:
-        print(ping_result)
         print("Pinging IP [%s] successful." % my_server_ip)
     else:
         print("Pinging IP [%s] Failed." % my_server_ip)
 
-    print("**********")
+    print("\nUpdating server using ssh client from paramiko...")
+    ssh_result = my_server.upgrade()
+    print(''.join(ssh_result))
+
+    print('Done.')
