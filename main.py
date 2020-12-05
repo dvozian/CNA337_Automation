@@ -2,7 +2,7 @@
 # Zachary Rubin, zrubin@rtc.edu
 # CNA 337 Fall 2020
 # Automate SSH
-# Participants: Dorin Vozian, Vlado Situm, Abdirizak Kulmie
+# Participants: Dorin Vozian, Vlado Situm, Igor Turcan, Abdirizak Kulmie
 # Tutoring Liviu Patrasco liviu_patrasco@hotmail.com
 from Server import Server
 
