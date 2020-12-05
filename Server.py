@@ -19,7 +19,7 @@ class Server:
 
     def ping(self):
         # TODO - Use os module to ping the server
-        result = os.system("ping -c 1 %s" % self.server_ip)
+        result = os.system("ping -c 3 %s" % self.server_ip)
         return result
 
     def upgrade(self):
@@ -35,8 +35,10 @@ class Server:
         # execute the command
         stdin, stdout, stderr = ssh_client.exec_command(self.command)
 
+        # Return the result from both stdout and error
+        result = stdout.readlines() + stderr.readlines()
+
         # Disconnect
         ssh_client.close()
 
-        # Return the result from both stdout and error
-        return stdout.readlines() + stderr.readlines()
+        return result
